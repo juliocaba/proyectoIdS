@@ -25,3 +25,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('inventarios', App\Http\Controllers\Admin\InventarioController::class, ["as" => 'admin']);
 });
+
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('clientes', App\Http\Controllers\Admin\ClienteController::class, ["as" => 'admin']);
+});

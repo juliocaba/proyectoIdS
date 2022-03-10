@@ -13,3 +13,11 @@
         <i class="fas fa-tasks" style="text-align: center; margin-right: .4em;"></i><p  align="right">Inventario</p>
     </a>
  </li>
+<li class="nav-item">
+    <a href="{{ route('admin.clientes.index') }}"
+       class="nav-link {{ Request::is('admin/clientes*') ? 'active' : '' }}">
+        <p>Clientes</p>
+    </a>
+</li>
+
+

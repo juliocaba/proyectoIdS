@@ -19,6 +19,7 @@ class CreateInventariosTable extends Migration
             $table->string('nombre');
             $table->integer('cantidad');
             $table->string('estado');
+            $table->string('descripcion');
             $table->timestamps();
             $table->softDeletes();
         });

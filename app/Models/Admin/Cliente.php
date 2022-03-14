@@ -28,8 +28,11 @@ class Cliente extends Model
 
 
     public $fillable = [
-        'nombre',
-        'telefono'
+        'nombre_cliente',
+        'nombre_perro',
+        'tamaño',
+        'telefono',
+        'descripcion'
     ];
 
     /**
@@ -38,8 +41,11 @@ class Cliente extends Model
      * @var array
      */
     protected $casts = [
-        'nombre' => 'string',
-        'telefono' => 'string'
+        'nombre_cliente' => 'string',
+        'nombre_perro' => 'string',
+        'tamaño' => 'string',
+        'telefono' => 'string',
+        'descripcion' => 'string'
     ];
 
     /**
@@ -48,8 +54,12 @@ class Cliente extends Model
      * @var array
      */
     public static $rules = [
-        'nombre' => 'required',
-        'telefono' => 'required'
+        'nombre_cliente' => 'required',
+        'nombre_perro' => 'required',
+        'tamaño'=> 'required',
+        'telefono' => 'required',
+        'descripcion' => 'required'
+        
     ];
 
     

@@ -31,7 +31,8 @@ class Inventario extends Model
     public $fillable = [
         'nombre',
         'cantidad',
-        'estado'
+        'estado',
+        'descripcion'
     ];
 
     /**
@@ -42,7 +43,8 @@ class Inventario extends Model
     protected $casts = [
         'nombre' => 'string',
         'cantidad' => 'integer',
-        'estado' => 'string'
+        'estado' => 'string',
+        'descripcion' => 'string'
     ];
 
     /**
@@ -53,7 +55,8 @@ class Inventario extends Model
     public static $rules = [
         'nombre' => 'required',
         'cantidad' => 'required',
-        'estado' => 'required'
+        'estado' => 'required',
+        'descripcion' => ''
     ];
 
     

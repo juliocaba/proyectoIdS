@@ -65,7 +65,10 @@ class ClienteDataTable extends DataTable
     protected function getColumns()
     {
         return [
-            'nombre',
+            'nombre_cliente',
+            'nombre_perro',
+            'tamaño',
+            'descripcion',
             'telefono'
         ];
     }

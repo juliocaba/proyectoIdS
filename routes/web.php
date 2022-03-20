@@ -36,3 +36,7 @@ Route::group(['prefix' => 'admin'], function () {
 
 Route::get('fullcalender', [FullCalenderController::class, 'index']);
 Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('turnos', App\Http\Controllers\Admin\TurnoController::class, ["as" => 'admin']);
+});

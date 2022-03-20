@@ -1,4 +1,4 @@
-{{--
+
 @extends('layouts.app')
 
 @section('content')
@@ -8,8 +8,8 @@
     </div>
 </div>
 @endsection
---}}
 
+{{-- 
 @extends('maestra')
 @section("titulo", "Inicio")
 @section('contenido')
@@ -54,4 +54,4 @@
 
     <body background="/img/fondo4.jpg">
 
-@endsection
+@endsection --}}

@@ -24,6 +24,7 @@
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
             select: function (data) {
+                //$('#eventModal').modal({});
                 let title = prompt('Event Title:');
 
                 if (title) {

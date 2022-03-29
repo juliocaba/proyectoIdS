@@ -12,7 +12,7 @@
         let element = document.getElementById('calendar');
         let calendar = new FullCalendar.Calendar(element, {
             locale: 'es',
-            height: 768,
+            height: 512,
             editable: true,
             initialView: 'dayGridMonth',
             selectable: true,

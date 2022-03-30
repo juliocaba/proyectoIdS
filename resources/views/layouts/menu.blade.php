@@ -19,19 +19,3 @@
     </a>
  </li>
  
-{{-- <li class="nav-item">
-    <a href="{{ route('admin.clientes.index') }}"
-       class="nav-link {{ Request::is('admin/clientes*') ? 'active' : '' }}">
-        <p>Clientes</p>
-    </a>
-</li> --}}
-
-{{-- 
-<li class="nav-item">
-    <a href="{{ route('admin.turnos.index') }}"
-       class="nav-link {{ Request::is('admin/turnos*') ? 'active' : '' }}">
-        <p>Turnos</p>
-    </a>
-</li>
-
- --}}

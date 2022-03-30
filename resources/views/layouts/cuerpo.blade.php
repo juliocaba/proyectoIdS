@@ -21,7 +21,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" id="btnAgregar" class="btn btn-success">Agregar</button>
+                    <button type="button" id="turno-confirm" class="btn btn-success">Agregar</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>        
                 </div>
             </div>

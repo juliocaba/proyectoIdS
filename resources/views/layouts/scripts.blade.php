@@ -5,7 +5,7 @@
         
         $.ajaxSetup({
             headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
             }
         });
 
@@ -23,30 +23,50 @@
                 center: 'title',
                 right: 'dayGridMonth,timeGridWeek,timeGridDay'
             },
-            select: function (data) {
-                //$('#eventModal').modal({});
-                let title = prompt('Event Title:');
+            dateClick: function (data) {
+                $('#eventModal').modal({});
 
-                if (title) {
-                    let start = sqlDate(data.start);
-                    let end = sqlDate(data.end);
-                    let allDay = data.allDay;
+                $('#turno-confirm').unbind('click');
+                $('#turno-confirm').on('click', function(event) {
+                    let title = $('#turno-title').val();
+                    let startTime = $('#turno-start').val();
 
-                    $.ajax({
-                        url: SITEURL + '/fullcalenderAjax',
-                        data: {
-                            title: title,
-                            start: start,
-                            end: end,
-                            type: 'add'
-                        },
-                        type: 'POST',
-                        success: function (data) {
-                            calendar.getEventSources()[0].refetch();
-                            calendar.unselect();
-                        }
-                    });
-                }
+                    if (title && startTime) {
+                        let today = data.date;
+
+                        startTime = startTime.split(':');
+                        let hours = parseInt(startTime[0]);
+                        let minutes = parseInt(startTime[1]);
+
+                        let start = new Date(today);
+                        let end = new Date(today);
+                        start.setHours(hours);
+                        start.setMinutes(minutes);
+                        start.setTime(start.getTime() - new Date().getTimezoneOffset() * 60000);
+                        end.setHours(hours + 1);
+                        end.setMinutes(minutes);
+                        end.setTime(end.getTime() - new Date().getTimezoneOffset() * 60000);
+
+                        $.ajax({
+                            url: SITEURL + '/fullcalenderAjax',
+                            data: {
+                                title: title,
+                                start: sqlDate(start),
+                                end: sqlDate(end),
+                                type: 'add'
+                            },
+                            type: 'POST',
+                            success: function (data) {
+                                $('#eventModal').modal('hide');
+                                $('#turno-title').val("");
+                                $('#turno-start').val("");
+
+                                calendar.getEventSources()[0].refetch();
+                                calendar.unselect();
+                            }
+                        });
+                    }
+                });
             },
             eventDrop: function (data) {
                 let event = data.event;

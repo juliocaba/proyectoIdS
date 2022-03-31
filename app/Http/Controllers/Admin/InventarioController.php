@@ -56,7 +56,7 @@ class InventarioController extends AppBaseController
 
         $inventario = $this->inventarioRepository->create($input);
 
-        Flash::success('Inventario saved successfully.');
+        Flash::success('Producto agregado correctamente.');
 
         return redirect(route('admin.inventarios.index'));
     }
@@ -73,7 +73,7 @@ class InventarioController extends AppBaseController
         $inventario = $this->inventarioRepository->find($id);
 
         if (empty($inventario)) {
-            Flash::error('Inventario not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('admin.inventarios.index'));
         }
@@ -93,7 +93,7 @@ class InventarioController extends AppBaseController
         $inventario = $this->inventarioRepository->find($id);
 
         if (empty($inventario)) {
-            Flash::error('Inventario not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('admin.inventarios.index'));
         }
@@ -114,14 +114,14 @@ class InventarioController extends AppBaseController
         $inventario = $this->inventarioRepository->find($id);
 
         if (empty($inventario)) {
-            Flash::error('Inventario not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('admin.inventarios.index'));
         }
 
         $inventario = $this->inventarioRepository->update($request->all(), $id);
 
-        Flash::success('Inventario updated successfully.');
+        Flash::success('Inventario actualizado correctamente.');
 
         return redirect(route('admin.inventarios.index'));
     }
@@ -138,14 +138,14 @@ class InventarioController extends AppBaseController
         $inventario = $this->inventarioRepository->find($id);
 
         if (empty($inventario)) {
-            Flash::error('Inventario not found');
+            Flash::error('Inventario no encontrado.');
 
             return redirect(route('admin.inventarios.index'));
         }
 
         $this->inventarioRepository->delete($id);
 
-        Flash::success('Inventario deleted successfully.');
+        Flash::success('Producto eliminado correctamente.');
 
         return redirect(route('admin.inventarios.index'));
     }

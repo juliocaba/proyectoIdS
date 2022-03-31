@@ -56,7 +56,7 @@ class ClienteController extends AppBaseController
 
         $cliente = $this->clienteRepository->create($input);
 
-        Flash::success('Cliente saved successfully.');
+        Flash::success('Cliente agregado correctamente.');
 
         return redirect(route('admin.clientes.index'));
     }
@@ -73,7 +73,7 @@ class ClienteController extends AppBaseController
         $cliente = $this->clienteRepository->find($id);
 
         if (empty($cliente)) {
-            Flash::error('Cliente not found');
+            Flash::error('Cliente no encontrado.');
 
             return redirect(route('admin.clientes.index'));
         }
@@ -93,7 +93,7 @@ class ClienteController extends AppBaseController
         $cliente = $this->clienteRepository->find($id);
 
         if (empty($cliente)) {
-            Flash::error('Cliente not found');
+            Flash::error('Cliente no encontrado.');
 
             return redirect(route('admin.clientes.index'));
         }
@@ -114,14 +114,14 @@ class ClienteController extends AppBaseController
         $cliente = $this->clienteRepository->find($id);
 
         if (empty($cliente)) {
-            Flash::error('Cliente not found');
+            Flash::error('Cliente no encontrado.');
 
             return redirect(route('admin.clientes.index'));
         }
 
         $cliente = $this->clienteRepository->update($request->all(), $id);
 
-        Flash::success('Cliente updated successfully.');
+        Flash::success('Cliente actualizado correctamente.');
 
         return redirect(route('admin.clientes.index'));
     }
@@ -138,14 +138,14 @@ class ClienteController extends AppBaseController
         $cliente = $this->clienteRepository->find($id);
 
         if (empty($cliente)) {
-            Flash::error('Cliente not found');
+            Flash::error('Cliente no encontrado.');
 
             return redirect(route('admin.clientes.index'));
         }
 
         $this->clienteRepository->delete($id);
 
-        Flash::success('Cliente deleted successfully.');
+        Flash::success('Cliente eliminado correctamente.');
 
         return redirect(route('admin.clientes.index'));
     }

@@ -33,7 +33,6 @@
 </head>
 
  <style>
-    /* Coded with love by Mutiullah Samim */
             body,
             html {
                 margin: 0;
@@ -42,9 +41,9 @@
                 background: #f3efee !important;
             }
             .user_card {
-                height: 400px;
+                height: 550px;
                 width: 350px;
-                margin-top: auto;
+                margin-top: 5%;
                 margin-bottom: auto;
                 background: transparent;
                 position: relative;
@@ -62,7 +61,7 @@
                 position: absolute;
                 height: 170px;
                 width: 170px;
-                top: -75px;
+                top: 35px;
                 border-radius: 80%;
                 background: #2b3232;
                 padding: 10px;
@@ -75,7 +74,7 @@
                 border: 2px solid white;
             }
             .form_container {
-                margin-top: 100px;
+                margin-top: 180px;
             }
             .login_btn {
                 width: 100%;
@@ -129,7 +128,7 @@
 							<div class="input-group-append">
 								<span class="input-group-text"><i class="fas fa-key"></i></span>
 							</div>       
-                            <input type="password" name="password" placeholder="Password" class="form-control @error('password') is-invalid @enderror">                     							
+                            <input type="password" name="password" placeholder="Contraseña" class="form-control @error('password') is-invalid @enderror">                     							
 						</div>
                         @error('password')
                             <span class="error invalid-feedback">{{ $message }}</span>
@@ -141,18 +140,18 @@
                             </div>						
 						</div>
 						<div class="d-flex justify-content-center mt-3 login_container">
-				 	        <button type="submit" name="button" class="btn login_btn">Login</button>
+				 	        <button type="submit" name="button" class="btn login_btn">Iniciar Sesión</button>
 				        </div>
 					</form>
 				</div>
 		
 				<div class="mt-4">
 					<div class="d-flex justify-content-center links">
-						No tienes una cuenta?  
+						¿No tienes una cuenta?  
                         <a href="{{ route('register') }}" class="text-center pl-1">Registrate</a>                        
 					</div>                    
 					<div class="d-flex justify-content-center links">
-                        <a href="{{ route('password.request') }}">Olvide mi contraseña</a>					
+                        <a href="{{ route('password.request') }}">Olvidé mi contraseña</a>					
 					</div>
 				</div>
 

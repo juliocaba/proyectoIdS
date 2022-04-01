@@ -70,7 +70,6 @@ class InventarioDataTable extends DataTable
         return [
             'nombre',
             'cantidad',
-            'estado',
             'descripcion'
         ];
     }

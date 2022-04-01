@@ -13,7 +13,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
  *
  * @property string $nombre
  * @property integer $cantidad
- * @property string $estado
  */
 class Inventario extends Model
 {
@@ -31,7 +30,6 @@ class Inventario extends Model
     public $fillable = [
         'nombre',
         'cantidad',
-        'estado',
         'descripcion'
     ];
 
@@ -43,7 +41,6 @@ class Inventario extends Model
     protected $casts = [
         'nombre' => 'string',
         'cantidad' => 'integer',
-        'estado' => 'string',
         'descripcion' => 'string'
     ];
 
@@ -54,8 +51,7 @@ class Inventario extends Model
      */
     public static $rules = [
         'nombre' => 'required',
-        'cantidad' => 'required',
-        'estado' => 'required',
+        'cantidad' => 'numeric|required|min:1',
         'descripcion' => ''
     ];
 

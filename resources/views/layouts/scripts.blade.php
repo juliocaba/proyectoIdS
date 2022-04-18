@@ -17,6 +17,7 @@
             initialView: 'dayGridMonth',
             selectable: true,
             events: SITEURL + '/fullcalender',
+            timeZone: 'local',
             themeSystem: 'bootstrap',
             headerToolbar: {
                 left: 'prev,next today',
@@ -42,10 +43,8 @@
                         let end = new Date(today);
                         start.setHours(hours);
                         start.setMinutes(minutes);
-                        start.setTime(start.getTime() - new Date().getTimezoneOffset() * 60000);
                         end.setHours(hours + 1);
                         end.setMinutes(minutes);
-                        end.setTime(end.getTime() - new Date().getTimezoneOffset() * 60000);
 
                         $.ajax({
                             url: SITEURL + '/fullcalenderAjax',

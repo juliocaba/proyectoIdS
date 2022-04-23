@@ -120,7 +120,7 @@
     }
      
     function displayMessage(message) {
-        toastr.success(message, 'Event');
+        toastr.success(message, 'Actualización');
     } 
       
     </script>

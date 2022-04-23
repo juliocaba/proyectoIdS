@@ -109,6 +109,7 @@
     <!-- Left side column. contains the logo and sidebar -->
 @include('layouts.sidebar')
 
+
 <!-- Content Wrapper. Contains page content -->
     <div class="content-wrapper">
         <section class="content">

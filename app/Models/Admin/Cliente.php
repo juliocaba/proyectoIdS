@@ -57,7 +57,7 @@ class Cliente extends Model
         'nombre_cliente' => 'required',
         'nombre_perro' => 'required',
         'tamaño'=> 'required',
-        'telefono' => 'required',
+        'telefono' => 'numeric|required',
         'descripcion' => 'required'
         
     ];

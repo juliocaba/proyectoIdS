@@ -52,7 +52,7 @@ class Inventario extends Model
     public static $rules = [
         'nombre' => 'required',
         'cantidad' => 'numeric|required|min:1',
-        'descripcion' => ''
+        'descripcion' => 'required'
     ];
 
     

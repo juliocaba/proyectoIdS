@@ -18,7 +18,7 @@ class FullCalenderController extends Controller
     {
         $data = Event::whereDate('start', '>=', $request->start)
             ->whereDate('end',   '<=', $request->end)
-            ->get(['id', 'title', 'start', 'end']);
+            ->get(['id', 'title', 'start', 'end', 'type_service', 'animal_size', 'state', 'description']);
 
         foreach ($data as &$date) {
             $date->start = (new DateTime($date->start))->format(DateTime::ISO8601);
@@ -41,6 +41,10 @@ class FullCalenderController extends Controller
                     'title' => $request->title,
                     'start' => $request->start,
                     'end' => $request->end,
+                    'type_service'=> $request->typeService,
+                    'animal_size' => $request->animalSize,
+                    'state' => $request->state,
+                    'description' => $request->description,
                 ]);
     
                 return response()->json($event);

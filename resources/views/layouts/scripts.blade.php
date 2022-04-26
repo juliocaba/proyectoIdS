@@ -27,12 +27,19 @@
             dateClick: function (data) {
                 $('#eventModal').modal({});
 
+                //$('input[name=state]', '#state-form').val(['cancelado']);
+
                 $('#turno-confirm').unbind('click');
                 $('#turno-confirm').on('click', function(event) {
                     let title = $('#turno-title').val();
                     let startTime = $('#turno-start').val();
 
                     if (title && startTime) {
+                        let typeService = $('input[name=type-service]:checked', '#type-service-form').val();
+                        let animalSize = $('input[name=animal-size]:checked', '#animal-size-form').val();
+                        let state = $('input[name=state]:checked', '#state-form').val();
+                        let description = $('#description-form').val();
+
                         let today = data.date;
 
                         startTime = startTime.split(':');
@@ -52,6 +59,10 @@
                                 title: title,
                                 start: sqlDate(start),
                                 end: sqlDate(end),
+                                typeService: typeService,
+                                animalSize: animalSize,
+                                state: state,
+                                description: description ?? '',
                                 type: 'add'
                             },
                             type: 'POST',
@@ -94,7 +105,7 @@
             eventClick: function (data) {
                 let event = data.event;
                 let deleteMsg = confirm('¿Deseas borrar el turno?');
-                console.log(event);
+
                 if (deleteMsg) {
                     $.ajax({
                         type: 'POST',

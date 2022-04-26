@@ -17,6 +17,9 @@ use App\Http\Controllers\FullCalenderController;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/admin/estadistica', function () {
+    return view('admin/estadistica/estadistica');
+});
 
 Auth::routes();
 
@@ -24,11 +27,17 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Route::get('/prueba', [App\Http\Controllers\HomeController::class, 'index'])->name('prueba');
 
+/* Route::get('/admin/estadistica', function () {
+    return view('admin.estadistica.estadistica');
+}); */
+
+Route::group(['prefix' => 'admin'], function () {
+    Route::resource('estadistica', App\Http\Controllers\Admin\EstadisticaController::class, ["as" => 'admin']);
+});
 
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('inventarios', App\Http\Controllers\Admin\InventarioController::class, ["as" => 'admin']);
 });
-
 
 Route::group(['prefix' => 'admin'], function () {
     Route::resource('clientes', App\Http\Controllers\Admin\ClienteController::class, ["as" => 'admin']);

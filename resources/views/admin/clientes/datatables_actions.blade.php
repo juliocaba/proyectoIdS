@@ -1,15 +1,23 @@
 {!! Form::open(['route' => ['admin.clientes.destroy', $id], 'method' => 'delete']) !!}
 <div class='btn-group'>
+    
     <a href="{{ route('admin.clientes.show', $id) }}" class='btn btn-default btn-xs'>
         <i class="fa fa-eye"></i>
     </a>
     <a href="{{ route('admin.clientes.edit', $id) }}" class='btn btn-default btn-xs'>
         <i class="fa fa-edit"></i>
     </a>
+    
     {!! Form::button('<i class="fa fa-trash"></i>', [
         'type' => 'submit',
         'class' => 'btn btn-danger btn-xs',
         'onclick' => "return confirm('Are you sure?')"
     ]) !!}
+    
+</div>
+<div class='btn-group'>
+    <a href="https://api.whatsapp.com/send?phone=2954390523" class='btn btn-default btn-xs'>
+        <i class="fa fa-address-card"></i>
+    </a>
 </div>
 {!! Form::close() !!}

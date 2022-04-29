@@ -55,6 +55,10 @@ class FullCalenderController extends Controller
                     'title' => $request->title,
                     'start' => $request->start,
                     'end' => $request->end,
+                    'type_service'=> $request->typeService,
+                    'animal_size' => $request->animalSize,
+                    'state' => $request->state,
+                    'description' => $request->description,
                 ]);
     
                 return response()->json($event);

@@ -27,9 +27,10 @@
                     <br>
                     <textarea id="description-form" class="form-control" maxlength="65535"></textarea>
                     <br>
-                    <label>Tamaño del animal:</label>
-                    <br>
+
                     <form id="animal-size-form" class="form-group col-md-12">
+                        <label>Tamaño del animal:</label>
+                        <br>
                         <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="customRadioInline1"  value="pequeño" name="animal-size"  class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline1">Pequeño</label>
@@ -44,9 +45,9 @@
                         </div>
                     </form>
 
-                    <label>Tipo de servicio:</label>
-                    <br>
                     <form id="type-service-form" class="form-group col-md-12">
+                        <label>Tipo de servicio:</label>
+                        <br>
                         <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="customRadioInline4" value="baño" name="type-service" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline4">Baño</label>
@@ -61,9 +62,9 @@
                         </div>
                     </form>
 
-                    <label>Estado del servicio:</label>
-                    <br>
                     <form id="state-form" class="form-group col-md-12">
+                        <label>Estado del servicio:</label>
+                        <br>
                         <div class="custom-control custom-radio custom-control-inline">
                             <input type="radio" id="customRadioInline7" value="en_curso" name="state" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline7">En curso</label>
@@ -88,7 +89,7 @@
                     <button type="button" id="turno-update" class="btn btn-warning">Modificar</button>
                     <button type="button" id="turno-delete" class="btn btn-danger">Eliminar</button>
                     <!-- ale -->
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>        
+                    <button type="button" id="turno-cancel" class="btn btn-default" data-dismiss="modal">Cancelar</button>        
                 </div>
             </div>
         </div>

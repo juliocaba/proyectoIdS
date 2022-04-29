@@ -175,6 +175,7 @@
                     },
                     success: function (response) {
                         $('#eventModal').modal('hide');
+                        clearFormData();
 
                         successMessage('Turno eliminado correctamente.');
                         calendar.getEventById(event.id).remove();

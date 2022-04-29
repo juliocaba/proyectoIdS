@@ -1,7 +1,8 @@
 @echo off
 
 cd C:/laragon
-start laragon.exe
+
+tasklist /nh /fi "imagename eq laragon.exe" | find /i "laragon.exe" > nul || (start laragon.exe)
 
 sleep 20
 

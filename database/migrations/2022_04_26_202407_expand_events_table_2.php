@@ -4,9 +4,8 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTurnosTable extends Migration
+class ExpandEventsTable2 extends Migration
 {
-
     /**
      * Run the migrations.
      *
@@ -14,11 +13,9 @@ class CreateTurnosTable extends Migration
      */
     public function up()
     {
-        Schema::create('turnos', function (Blueprint $table) {
-            $table->id('id');
-            $table->timestamps();
-            $table->softDeletes();
-        });
+        Schema::table('events', function (Blueprint $table) {
+            $table->enum('state', ['en_curso', 'cancelado', 'finalizado']);
+        });;
     }
 
     /**
@@ -28,6 +25,8 @@ class CreateTurnosTable extends Migration
      */
     public function down()
     {
-        Schema::drop('turnos');
+        Schema::table('events', function (Blueprint $table) {
+            $table->dropColumn('state');
+        });;
     }
 }

@@ -16,7 +16,8 @@
     
 </div>
 <div class='btn-group'>
-    <a href="https://api.whatsapp.com/send?phone=2954390523" class='btn btn-default btn-xs'>
+    
+    <a href="https://api.whatsapp.com/send?phone=<?php echo $telefono?>&text=hola,%20su%20turno%20a%20sido%20modificado" class='btn btn-default btn-xs'>
         <i class="fa fa-address-card"></i>
     </a>
 </div>

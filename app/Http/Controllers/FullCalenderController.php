@@ -17,7 +17,7 @@ class FullCalenderController extends Controller
     public function index(Request $request)
     {
         $data = Event::whereDate('start', '>=', $request->start)
-            ->whereDate('end',   '<=', $request->end)
+            ->whereDate('end', '<=', $request->end)
             ->get(['id', 'title', 'start', 'end', 'type_service', 'animal_size', 'state', 'description']);
 
         foreach ($data as &$date) {
@@ -25,7 +25,7 @@ class FullCalenderController extends Controller
             $date->end = (new DateTime($date->end))->format(DateTime::ISO8601);
         }
 
-        return response()->json($data);
+        return response()->json($res);
     }
  
     /**

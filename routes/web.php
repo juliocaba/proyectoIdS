@@ -1,6 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\InventarioController;
+use App\Http\Controllers\Admin\ClienteController;
+use App\Http\Controllers\Admin\TurnoController;
+use App\Http\Controllers\Admin\EstadisticaController;
 use App\Http\Controllers\FullCalenderController;
 
 /*
@@ -23,29 +28,26 @@ Route::get('/admin/estadistica', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
-Route::get('/prueba', [App\Http\Controllers\HomeController::class, 'index'])->name('prueba');
-
-/* Route::get('/admin/estadistica', function () {
-    return view('admin.estadistica.estadistica');
-}); */
+Route::get('/prueba', [HomeController::class, 'index'])->name('prueba');
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('estadistica', App\Http\Controllers\Admin\EstadisticaController::class, ["as" => 'admin']);
+    Route::resource('estadistica', EstadisticaController::class, ["as" => 'admin']);
 });
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('inventarios', App\Http\Controllers\Admin\InventarioController::class, ["as" => 'admin']);
+    Route::resource('inventarios', InventarioController::class, ["as" => 'admin']);
 });
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('clientes', App\Http\Controllers\Admin\ClienteController::class, ["as" => 'admin']);
+    Route::resource('clientes', ClienteController::class, ["as" => 'admin']);
 });
 
+Route::get('stats', [EstadisticaController::class, 'stats']);
 Route::get('fullcalender', [FullCalenderController::class, 'index']);
 Route::post('fullcalenderAjax', [FullCalenderController::class, 'ajax']);
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::resource('turnos', App\Http\Controllers\Admin\TurnoController::class, ["as" => 'admin']);
+    Route::resource('turnos', TurnoController::class, ["as" => 'admin']);
 });

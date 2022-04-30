@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\Admin;
 
 
+use Illuminate\Http\Request;
 use App\Http\Requests\Admin;
+use App\Models\Event;
 use Flash;
-use App\Http\Controllers\AppBaseController;
+use App\Http\Controllers\Controller;
 use Response;
 
-class EstadisticaController extends AppBaseController
+class EstadisticaController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -29,5 +31,14 @@ class EstadisticaController extends AppBaseController
     public function index()
     {
         return view('admin.estadistica.index');
+    }
+
+    public function stats() {
+        $cant_perros_pequeños = Event::where('animal_size', 'pequeño')->count();
+        $res = [
+            'cantPerrosPequeños' => $cant_perros_pequeños 
+        ];
+
+        return response()->json($res);
     }
 }

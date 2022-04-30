@@ -13,7 +13,7 @@
 </div>
 <div class="form-group col-sm-6">
     {!! Form::label('tamaño', 'Tamaño del perro:') !!}
-    {!! Form::select('tamaño', ['1' => 'Chico', '2'=> 'Mediano'], null, ['class' => 'form-control']) !!}
+    {!! Form::select('tamaño', ['1' => 'Chico', '2'=> 'Mediano', '3'=> 'Grande'], null, ['class' => 'form-control']) !!}
 </div>
 
 <div class="form-group col">

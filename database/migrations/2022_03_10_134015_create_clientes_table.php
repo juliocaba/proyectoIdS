@@ -18,7 +18,7 @@ class CreateClientesTable extends Migration
             $table->id('id');
             $table->text('nombre_cliente');
             $table->text('nombre_perro');
-            $table->enum('tamaño', ['chico', 'mediano']);
+            $table->enum('tamaño', ['chico', 'mediano', 'grande']);
             $table->text('telefono');
             $table->text('descripcion');
             $table->timestamps();

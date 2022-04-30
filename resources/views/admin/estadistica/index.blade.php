@@ -1,4 +1,4 @@
-@extends('layouts.app')
+ @extends('layouts.app')
 
 @section('content')
     <section class="content-header">
@@ -11,16 +11,68 @@
         </div>
     </section>
 
+    
+<?php
+    $srv="127.0.0.1"; //Servidor
+    $usr="root"; //Usuario
+    $psw=""; //Contraseña, en este caso no hay.
+    
+    $conection = mysqli_connect($srv, $usr, $psw, "perritosfelices") or die("error");
+    $cant_perros_pequenios="SELECT COUNT(animal_size) AS cant_peques 
+                            FROM events 
+                            WHERE animal_size!='mediano' AND animal_size!='grande'";
+    $cant_perros_medianos="SELECT COUNT(animal_size) AS cant_medianos 
+                            FROM events 
+                            WHERE animal_size='mediano'";
+    $cant_perros_grandes="SELECT COUNT(animal_size) AS cant_grandes 
+                            FROM events 
+                            WHERE animal_size='grande'";
+    $cant_perros_corte="SELECT COUNT(type_service) AS cant_corte 
+                        FROM events 
+                        WHERE type_service='corte'";
+    $cant_perros_banio="SELECT COUNT(type_service) AS cant_banio 
+                        FROM events 
+                        WHERE type_service!='corte' AND type_service!='ambos'";
+    $cant_perros_ambos="SELECT COUNT(type_service) AS cant_ambos 
+                        FROM events 
+                        WHERE type_service='ambos'";
+
+    $peq=mysqli_query($conection, $cant_perros_pequenios);
+    $med=mysqli_query($conection, $cant_perros_medianos);
+    $gran=mysqli_query($conection, $cant_perros_grandes);
+    $corte=mysqli_query($conection, $cant_perros_corte);
+    $banio=mysqli_query($conection, $cant_perros_banio);
+    $ambos=mysqli_query($conection, $cant_perros_ambos);
+
+    while($row1=mysqli_fetch_array($peq) and 
+        $row2=mysqli_fetch_array($med) and 
+        $row3=mysqli_fetch_array($gran) and
+        $row4=mysqli_fetch_array($corte) and
+        $row5=mysqli_fetch_array($banio) and
+        $row6=mysqli_fetch_array($ambos)){
+
+        echo "pequeños: $row1[cant_peques]     ";
+        echo "medianos: $row2[cant_medianos]   ";
+        echo "grandes: $row3[cant_grandes]   ";
+        echo "corte: $row4[cant_corte]   ";
+        echo "baño: $row5[cant_banio]   ";
+        echo "ambos: $row6[cant_ambos]   ";
+    }
+?>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
 
 {{-- para cambiar el color de fondo del grafico, ponerlo al lado de id : style="background-color: rgba(106, 236, 13, 0.5)"--}}
 
-{{--PERROS POR MES--}}
+{{--PERROS POR MES
 
-<script src="https://cdn.jsdelivr.net/npm/chart.js@latest/dist/Chart.min.js"></script>
+
+
 <div class="container py-5" style="width:80%;">
 
    <center><h4>Cantidad de perros por mes</h4></center>
-
+   
+   
     <canvas id="perros_por_mes"></canvas>
     <script>
     var ctx = document.getElementById('perros_por_mes').getContext('2d');
@@ -77,12 +129,12 @@
     });
     </script>
 </div>
+--}}
 
 {{--PERROS POR TAMANIO--}}
 <div class="container py-5" style="width:80%;">
 
     <center><h4>Cantidad de perros por tamaño</h4></center>
-
     <canvas id="perros_por_tamanio"></canvas>
     <script>
     var ctx = document.getElementById('perros_por_tamanio').getContext('2d');
@@ -201,9 +253,4 @@
     </script>
 </div>
 
-
-
-    
-
-@endsection
-
+@endsection 

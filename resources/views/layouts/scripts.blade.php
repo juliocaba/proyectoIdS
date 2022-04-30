@@ -88,7 +88,7 @@
                         end: sqlDate(end),
                         typeService: form.typeService,
                         animalSize: form.animalSize,
-                        state: form.state,
+                        state: 'en_curso',
                         description: form.description,
                         type: 'add'
                     },

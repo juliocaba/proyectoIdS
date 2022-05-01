@@ -57,7 +57,8 @@
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            fontSize: 15
+                            fontSize: 15,
+                            stepSize: 1
                         },
                         scaleLabel: {
                         display: true,
@@ -134,7 +135,8 @@
                     yAxes: [{
                         ticks: {
                             beginAtZero: true,
-                            fontSize: 15
+                            fontSize: 15,
+                            stepSize: 1
                         },
                         scaleLabel: {
                         display: true,

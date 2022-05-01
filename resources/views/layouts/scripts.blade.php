@@ -27,12 +27,29 @@
             businessHours: [ // specify an array instead
                 {
                     daysOfWeek: [ 1, 2, 3 ], // Monday, Tuesday, Wednesday
-                    startTime: '08:00', // 8am
-                    endTime: '18:00' // 6pm
+                    startTime: '07:00', // 7 am
+                    endTime: '13:00' // 1pm
+                    
+
+                },
+                {
+                    daysOfWeek: [ 1, 2, 3 ], // Monday, Tuesday, Wednesday
+                    startTime: '16:30', // 4:30 pm
+                    endTime: '21:00' // 9pm
                 },
                 {
                     daysOfWeek: [ 4, 5 ], // Thursday, Friday
-                    startTime: '10:00', // 10am
+                    startTime: '08:00', // 8am
+                    endTime: '13:00' // 1pm
+                },
+                {
+                    daysOfWeek: [ 4, 5 ], // Thursday, Friday
+                    startTime: '17:30', // 5pm
+                    endTime: '22:00' // 10pm
+                },
+                {
+                    daysOfWeek: [6], // saturday
+                    startTime: '09:00', // 9am
                     endTime: '16:00' // 4pm
                 }
             ],
@@ -88,7 +105,7 @@
                         end: sqlDate(end),
                         typeService: form.typeService,
                         animalSize: form.animalSize,
-                        state: form.state,
+                        state: 'en_curso',
                         description: form.description,
                         type: 'add'
                     },

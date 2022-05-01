@@ -25,7 +25,7 @@ class FullCalenderController extends Controller
             $date->end = (new DateTime($date->end))->format(DateTime::ISO8601);
         }
 
-        return response()->json($data);
+        return response()->json($res);
     }
  
     /**

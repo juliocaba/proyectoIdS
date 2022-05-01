@@ -29,8 +29,6 @@
                     daysOfWeek: [ 1, 2, 3 ], // Monday, Tuesday, Wednesday
                     startTime: '07:00', // 7 am
                     endTime: '13:00' // 1pm
-                    
-
                 },
                 {
                     daysOfWeek: [ 1, 2, 3 ], // Monday, Tuesday, Wednesday
@@ -84,7 +82,7 @@
             $('#turno-confirm').on('click', function() {
                 let form = getFormData();
 
-                if (!(form.title && form.hours && form.minutes)) {
+                if (!form.title || form.hours === NaN || form.minutes === NaN) {
                     errorMessage('Se necesita especificar el título y la hora.');
                     return;
                 }
@@ -135,13 +133,13 @@
                 let event = data.event;
                 let form = getFormData();
 
-                if (!(form.title && form.hours && form.minutes)) {
+                if (!form.title || form.hours === NaN || form.minutes === NaN) {
                     errorMessage('Se necesita especificar el título y la hora.');
                     return;
                 }
 
                 let start = event.start;
-                let end = event.end;
+                let end = event.start;
                 start.setHours(form.hours);
                 start.setMinutes(form.minutes);
                 end.setHours(form.hours + 1);
@@ -156,7 +154,7 @@
                         end: sqlDate(end),
                         typeService: form.typeService,
                         animalSize: form.animalSize,
-                        state: 'en_curso',
+                        state: form.state,
                         description: form.description,
                         type: 'update'
                     },

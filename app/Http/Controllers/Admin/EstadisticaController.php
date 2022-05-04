@@ -34,12 +34,12 @@ class EstadisticaController extends Controller
     }
 
     public function stats() {
-        $cant_perros_pequeños = Event::where('animal_size', 'pequeño')->count();
-        $cant_perros_medianos = Event::where('animal_size', 'mediano')->count();
-        $cant_perros_grandes = Event::where('animal_size', 'grande')->count();
-        $cant_perros_corte = Event::where('type_service', 'corte')->count();
-        $cant_perros_banio = Event::where('type_service', 'baño')->count();
-        $cant_perros_ambos = Event::where('type_service', 'ambos')->count();
+        $cant_perros_pequeños = Event::where('animal_size', 'pequeño')->where('state', 'finalizado')->count();
+        $cant_perros_medianos = Event::where('animal_size', 'mediano')->where('state', 'finalizado')->count();
+        $cant_perros_grandes = Event::where('animal_size', 'grande')->where('state', 'finalizado')->count();
+        $cant_perros_corte = Event::where('type_service', 'corte')->where('state', 'finalizado')->count();
+        $cant_perros_banio = Event::where('type_service', 'baño')->where('state', 'finalizado')->count();
+        $cant_perros_ambos = Event::where('type_service', 'ambos')->where('state', 'finalizado')->count();
         $res = [
             'cantPerrosPequeños' => $cant_perros_pequeños,
             'cantPerrosMedianos' => $cant_perros_medianos,

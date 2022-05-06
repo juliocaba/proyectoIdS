@@ -17,7 +17,6 @@ class ClienteDataTable extends DataTable
     public function dataTable($query)
     {
         $dataTable = new EloquentDataTable($query);
-
         return $dataTable->addColumn('action', 'admin.clientes.datatables_actions');
     }
 
@@ -68,7 +67,7 @@ class ClienteDataTable extends DataTable
             'nombre_cliente',
             'nombre_perro',
             'tamaño',
-            'descripcion',
+       /*      'descripcion', */
             'telefono'
         ];
     }

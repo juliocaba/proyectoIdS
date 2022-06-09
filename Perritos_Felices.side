@@ -1,0 +1,638 @@
+{
+  "id": "83dc56f5-6877-4250-a6c7-e56c2096390c",
+  "version": "2.0",
+  "name": "Perritos_Felices",
+  "url": "http://proyectoids.test/home",
+  "tests": [{
+    "id": "0182da4f-1cf1-4165-b501-a533a3fd7031",
+    "name": "Esc_Exitoso_Principal",
+    "commands": [{
+      "id": "310a11be-c845-458b-b59e-888e86e4ab9a",
+      "comment": "",
+      "command": "open",
+      "target": "/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "11a54afc-e63a-43bc-9648-cac43b9a69b0",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "linkText=Inicio",
+      "targets": [
+        ["linkText=Inicio", "linkText"],
+        ["css=.mt-1:nth-child(1) > .nav-link", "css:finder"],
+        ["xpath=(//a[@href='http://proyectoids.test/home'])[2]", "xpath:href"],
+        ["xpath=//aside/div/nav/ul/li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Inicio')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "239cf2c8-6bc0-4ab1-9ce5-7b9bf5cdbff9",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df3081d1-d63f-4ba8-b804-495af38f2204",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Turnos",
+      "targets": [
+        ["linkText=Turnos", "linkText"],
+        ["css=.nav-item:nth-child(2) > .nav-link", "css:finder"],
+        ["xpath=//a[@href='http://proyectoids.test/admin/turnos']", "xpath:href"],
+        ["xpath=//nav/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Turnos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "4ed983ba-76c3-4151-89fb-109f2f11cd35",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=tr:nth-child(2) > .fc-day-fri .fc-daygrid-day-bottom",
+      "targets": [
+        ["css=tr:nth-child(2) > .fc-day-fri .fc-daygrid-day-bottom", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[2]/td[5]/div/div[2]/div", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[5]/div/div[2]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d36bf9b-dd42-401e-b90f-58746e3bf3b6",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.fc-highlight",
+      "targets": [
+        ["css=.fc-highlight", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[2]/td[5]/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//td[5]/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7aac97b2-32e0-4376-97ac-098110eb4911",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(2) > .fc-day-fri > .fc-daygrid-day-frame",
+      "targets": [
+        ["css=tr:nth-child(2) > .fc-day-fri > .fc-daygrid-day-frame", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[2]/td[5]/div", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ee1e194f-353d-4e3e-99a3-1c69cc6ee2d4",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-title",
+      "targets": [
+        ["id=turno-title", "id"],
+        ["css=#turno-title", "css:finder"],
+        ["xpath=//input[@id='turno-title']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "6d7f30cb-cf43-48ca-b305-d754723b14ae",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-title",
+      "targets": [
+        ["id=turno-title", "id"],
+        ["css=#turno-title", "css:finder"],
+        ["xpath=//input[@id='turno-title']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "d6a30192-f6bc-444d-8bd0-38c39f09bfb8",
+      "comment": "",
+      "command": "type",
+      "target": "id=turno-title",
+      "targets": [
+        ["id=turno-title", "id"],
+        ["css=#turno-title", "css:finder"],
+        ["xpath=//input[@id='turno-title']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "bullterrier Chicho"
+    }, {
+      "id": "ad79347c-bd7e-496a-90ad-158cb374d44d",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "aaffd445-746e-4c8d-af78-74c042f4e242",
+      "comment": "",
+      "command": "type",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "17:30"
+    }, {
+      "id": "cc82efb1-1bbd-4fb7-b44f-0bc9a92c81fa",
+      "comment": "",
+      "command": "click",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "17085afa-c4e8-4989-a69e-f15f6cbd39f3",
+      "comment": "",
+      "command": "type",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "padece otitis"
+    }, {
+      "id": "1043aba0-687b-4be4-8eed-f0ee9f499aef",
+      "comment": "",
+      "command": "click",
+      "target": "css=#animal-size-form > .custom-control:nth-child(4) > .custom-control-label",
+      "targets": [
+        ["css=#animal-size-form > .custom-control:nth-child(4) > .custom-control-label", "css:finder"],
+        ["xpath=//form[@id='animal-size-form']/div[2]/label", "xpath:idRelative"],
+        ["xpath=//form/div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mediano')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1811c53d-82b1-402d-b3e0-1f668ccf13eb",
+      "comment": "",
+      "command": "click",
+      "target": "css=#type-service-form > .custom-control:nth-child(3) > .custom-control-label",
+      "targets": [
+        ["css=#type-service-form > .custom-control:nth-child(3) > .custom-control-label", "css:finder"],
+        ["xpath=//form[@id='type-service-form']/div/label", "xpath:idRelative"],
+        ["xpath=//form[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Baño')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c1150bd3-9ba8-4f3f-bbd3-7c0b95bbc690",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-confirm",
+      "targets": [
+        ["id=turno-confirm", "id"],
+        ["css=#turno-confirm", "css:finder"],
+        ["xpath=//button[@id='turno-confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "07306901-da97-4665-836e-6e75529ae13a",
+      "comment": "",
+      "command": "click",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "389076d1-473a-4f29-ba13-bb2bfb84bf8b",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-event-title",
+      "targets": [
+        ["css=.fc-event-title", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[2]/td[5]/div/div[2]/div/a/div[3]", "xpath:idRelative"],
+        ["xpath=//a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5fb9ad81-65c1-4014-9c93-af2353c9904a",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=turno-title",
+      "targets": [],
+      "value": "bullterrier Chicho"
+    }, {
+      "id": "f7721569-8978-4e83-aacc-3f4f92e85a30",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "17:30"
+    }, {
+      "id": "f0f372e7-8578-42e5-bd8c-160db2bd198e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "padece otitis"
+    }, {
+      "id": "fd363ced-6236-4541-b093-9833545c4b69",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=customRadioInline2",
+      "targets": [
+        ["id=customRadioInline2", "id"],
+        ["css=#customRadioInline2", "css:finder"],
+        ["xpath=//input[@id='customRadioInline2']", "xpath:attributes"],
+        ["xpath=//form[@id='animal-size-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "on"
+    }, {
+      "id": "1e49fcaf-4558-4126-b6a5-a765e58fd60f",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=customRadioInline4",
+      "targets": [
+        ["id=customRadioInline4", "id"],
+        ["name=type-service", "name"],
+        ["css=#customRadioInline4", "css:finder"],
+        ["xpath=//input[@id='customRadioInline4']", "xpath:attributes"],
+        ["xpath=//form[@id='type-service-form']/div/input", "xpath:idRelative"],
+        ["xpath=//form[2]/div/input", "xpath:position"]
+      ],
+      "value": "on"
+    }]
+  }, {
+    "id": "00b37212-3885-4e5b-a4cf-dd80defea63b",
+    "name": "Esc_Alt_Exitoso",
+    "commands": [{
+      "id": "b097a223-cd20-4ff2-9252-e95d1402feec",
+      "comment": "",
+      "command": "open",
+      "target": "http://proyectoids.test/home",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "db9fdc54-22d1-4885-9029-70de5ceefce8",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c7cc4f25-bf87-4e94-a437-9e2c91171cc1",
+      "comment": "",
+      "command": "click",
+      "target": "css=.nav-item:nth-child(2) p",
+      "targets": [
+        ["css=.nav-item:nth-child(2) p", "css:finder"],
+        ["xpath=//li[2]/a/p", "xpath:position"],
+        ["xpath=//p[contains(.,'Turnos')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "59e50e68-e605-42ba-abdd-f0e62a859429",
+      "comment": "",
+      "command": "mouseDown",
+      "target": "css=tr:nth-child(3) > .fc-day-fri .fc-daygrid-day-events",
+      "targets": [
+        ["css=tr:nth-child(3) > .fc-day-fri .fc-daygrid-day-events", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[3]/td[5]/div/div[2]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0817c46-d162-4174-9149-cce9979d3d34",
+      "comment": "",
+      "command": "mouseUp",
+      "target": "css=.fc-highlight",
+      "targets": [
+        ["css=.fc-highlight", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[3]/td[5]/div/div[3]/div/div", "xpath:idRelative"],
+        ["xpath=//td[5]/div/div[3]/div/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "edfb0b38-1fc4-4bc3-a89e-d8cb9f69e0cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=tr:nth-child(3) > .fc-day-fri > .fc-daygrid-day-frame",
+      "targets": [
+        ["css=tr:nth-child(3) > .fc-day-fri > .fc-daygrid-day-frame", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[3]/td[5]/div", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/div", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a33c0be8-4b30-42d7-8bf9-48fb75f5701d",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e9075b5d-18a1-4bd4-8519-d8877d3bf40e",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5eb1490f-f6c0-49b3-8514-0595ff03d25e",
+      "comment": "",
+      "command": "type",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "17:30"
+    }, {
+      "id": "4a884108-efbe-42d7-967a-297ad6752b4a",
+      "comment": "",
+      "command": "click",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a038def-49c2-4a97-9ca8-606d6d59e84b",
+      "comment": "",
+      "command": "type",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "padece otitis"
+    }, {
+      "id": "e263a077-4924-4518-8ae6-2dfb60bf979d",
+      "comment": "",
+      "command": "click",
+      "target": "css=#animal-size-form > .custom-control:nth-child(4) > .custom-control-label",
+      "targets": [
+        ["css=#animal-size-form > .custom-control:nth-child(4) > .custom-control-label", "css:finder"],
+        ["xpath=//form[@id='animal-size-form']/div[2]/label", "xpath:idRelative"],
+        ["xpath=//form/div[2]/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Mediano')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a03d5922-23c4-43bf-88df-7e4874f60786",
+      "comment": "",
+      "command": "click",
+      "target": "css=#type-service-form > .custom-control:nth-child(3) > .custom-control-label",
+      "targets": [
+        ["css=#type-service-form > .custom-control:nth-child(3) > .custom-control-label", "css:finder"],
+        ["xpath=//form[@id='type-service-form']/div/label", "xpath:idRelative"],
+        ["xpath=//form[2]/div/label", "xpath:position"],
+        ["xpath=//label[contains(.,'Baño')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8bf3ff08-29e8-4427-bae8-747e8c648d03",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-confirm",
+      "targets": [
+        ["id=turno-confirm", "id"],
+        ["css=#turno-confirm", "css:finder"],
+        ["xpath=//button[@id='turno-confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb591d14-06e3-445a-8202-9c5525871bfb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//div[3]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b09ab7ce-ff6f-4d0c-8c51-82b56b6cc220",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "css=.fc-event-title",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "218b47fd-8887-4b2c-a93f-809211fc0fae",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-title",
+      "targets": [
+        ["id=turno-title", "id"],
+        ["css=#turno-title", "css:finder"],
+        ["xpath=//input[@id='turno-title']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a36909f9-1328-41e9-a28f-52516f45fb6e",
+      "comment": "",
+      "command": "type",
+      "target": "id=turno-title",
+      "targets": [
+        ["id=turno-title", "id"],
+        ["css=#turno-title", "css:finder"],
+        ["xpath=//input[@id='turno-title']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "bullterrier Chicho"
+    }, {
+      "id": "db08930c-4142-4e99-a463-dffdf90af705",
+      "comment": "",
+      "command": "click",
+      "target": "id=turno-confirm",
+      "targets": [
+        ["id=turno-confirm", "id"],
+        ["css=#turno-confirm", "css:finder"],
+        ["xpath=//button[@id='turno-confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8f078595-1c7b-4b11-87b9-b9e8acb5071e",
+      "comment": "",
+      "command": "mouseOut",
+      "target": "id=turno-confirm",
+      "targets": [
+        ["id=turno-confirm", "id"],
+        ["css=#turno-confirm", "css:finder"],
+        ["xpath=//button[@id='turno-confirm']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[3]/button", "xpath:idRelative"],
+        ["xpath=//div[3]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Agregar')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2adddf90-472a-43ea-b8c7-87d923df22b7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.toast-message",
+      "targets": [
+        ["css=.toast-message", "css:finder"],
+        ["xpath=//div[@id='toast-container']/div/div[2]", "xpath:idRelative"],
+        ["xpath=//body/div[2]/div/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "4caa8ec3-2c3e-4ce2-b9cd-6f0210b3ae86",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fc-event-title",
+      "targets": [
+        ["css=.fc-event-title", "css:finder"],
+        ["xpath=//div[@id='calendar']/div[2]/div/table/tbody/tr/td/div/div/div/table/tbody/tr[2]/td[5]/div/div[2]/div/a/div[3]", "xpath:idRelative"],
+        ["xpath=//a/div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "dccf6ab8-48c9-4ec8-bdcd-a5d06e5241ec",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=turno-title",
+      "targets": [],
+      "value": "bullterrier Chicho"
+    }, {
+      "id": "f247eef2-10aa-4cd5-a6f1-e06a4c9e18cd",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=turno-start",
+      "targets": [
+        ["id=turno-start", "id"],
+        ["name=appt", "name"],
+        ["css=#turno-start", "css:finder"],
+        ["xpath=//input[@id='turno-start']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/div/div[2]/input", "xpath:idRelative"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "17:30"
+    }, {
+      "id": "c1cc701a-8d6c-4bb2-bb66-3d306944b72a",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=description-form",
+      "targets": [
+        ["id=description-form", "id"],
+        ["css=#description-form", "css:finder"],
+        ["xpath=//textarea[@id='description-form']", "xpath:attributes"],
+        ["xpath=//div[@id='eventModal']/div/div/div[2]/textarea", "xpath:idRelative"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "padece otitis"
+    }, {
+      "id": "0e502cde-61c5-42e4-9c39-e406646b83d6",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=customRadioInline2",
+      "targets": [
+        ["id=customRadioInline2", "id"],
+        ["css=#customRadioInline2", "css:finder"],
+        ["xpath=//input[@id='customRadioInline2']", "xpath:attributes"],
+        ["xpath=//form[@id='animal-size-form']/div[2]/input", "xpath:idRelative"],
+        ["xpath=//form/div[2]/input", "xpath:position"]
+      ],
+      "value": "on"
+    }, {
+      "id": "ecdeccb3-c144-4df9-a6a9-cf8f9bfd1fa7",
+      "comment": "",
+      "command": "verifyChecked",
+      "target": "id=customRadioInline4",
+      "targets": [
+        ["id=customRadioInline4", "id"],
+        ["name=type-service", "name"],
+        ["css=#customRadioInline4", "css:finder"],
+        ["xpath=//input[@id='customRadioInline4']", "xpath:attributes"],
+        ["xpath=//form[@id='type-service-form']/div/input", "xpath:idRelative"],
+        ["xpath=//form[2]/div/input", "xpath:position"]
+      ],
+      "value": "on"
+    }]
+  }],
+  "suites": [{
+    "id": "9ae6df4e-3c99-440b-9408-5f208f35ba94",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0182da4f-1cf1-4165-b501-a533a3fd7031"]
+  }, {
+    "id": "d02e6d39-ccb7-4449-bee9-3777d704eb62",
+    "name": "Alternativo",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["00b37212-3885-4e5b-a4cf-dd80defea63b"]
+  }],
+  "urls": ["http://proyectoids.test/", "http://proyectoids.test/home"],
+  "plugins": []
+}

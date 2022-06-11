@@ -32,7 +32,7 @@
                         <label>Tamaño del animal:</label>
                         <br>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline1"  value="pequeño" name="animal-size"  class="custom-control-input">
+                            <input checked type="radio" id="customRadioInline1"  value="pequeño" name="animal-size"  class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline1">Pequeño</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
@@ -49,7 +49,7 @@
                         <label>Tipo de servicio:</label>
                         <br>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline4" value="baño" name="type-service" class="custom-control-input">
+                            <input checked type="radio" id="customRadioInline4" value="baño" name="type-service" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline4">Baño</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">
@@ -66,7 +66,7 @@
                         <label>Estado del servicio:</label>
                         <br>
                         <div class="custom-control custom-radio custom-control-inline">
-                            <input type="radio" id="customRadioInline7" value="en_curso" name="state" class="custom-control-input">
+                            <input checked type="radio" id="customRadioInline7" value="en_curso" name="state" class="custom-control-input">
                             <label class="custom-control-label" for="customRadioInline7">En curso</label>
                         </div>
                         <div class="custom-control custom-radio custom-control-inline">

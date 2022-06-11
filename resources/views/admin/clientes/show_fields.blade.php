@@ -1,7 +1,13 @@
 <!-- Nombre Field -->
 <div class="col-sm-12">
-    {!! Form::label('nombre', 'Nombre:') !!}
-    <p>{{ $cliente->nombre }}</p>
+    {!! Form::label('nombre_cliente', 'Nombre:') !!}
+    <p>{{ $cliente->nombre_cliente }}</p>
+</div>
+
+<!-- Descripcion Field -->
+<div class="col-sm-12">
+    {!! Form::label('descripcion', 'Descripción:') !!}
+    <p>{{ $cliente->descripcion }}</p>
 </div>
 
 <!-- Telefono Field -->

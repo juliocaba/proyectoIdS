@@ -292,7 +292,7 @@
     function eventOverlap(date) {
         let events = calendar.getEvents();
         let overlapping = events.filter((element) => {
-            let diff = Math.abs((endDate.getTime() - element.start.getTime()) / 1000);
+            let diff = Math.abs((date.getTime() - element.start.getTime()) / 1000);
             return diff >= 0 && diff < 3600;
         });
 

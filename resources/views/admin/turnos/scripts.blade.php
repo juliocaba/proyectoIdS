@@ -105,6 +105,11 @@
                 end.setHours(form.hours + 1);
                 end.setMinutes(form.minutes);
 
+                if (eventOverlap(start)) {
+                    errorMessage('Ya existe un turno en este horario.');
+                    return;
+                }
+
                 $.ajax({
                     url: SITEURL + '/fullcalenderAjax',
                     data: {
@@ -154,6 +159,11 @@
                 start.setMinutes(form.minutes);
                 end.setHours(form.hours + 1);
                 end.setMinutes(form.minutes);
+
+                if (eventOverlap(start)) {
+                    errorMessage('Ya existe un turno en este horario.');
+                    return;
+                }
 
                 $.ajax({
                     url: SITEURL + '/fullcalenderAjax',
@@ -277,6 +287,16 @@
         $('input[name=animal-size]', '#animal-size-form').val(['pequeño']);
         $('input[name=type-service]', '#type-service-form').val(['baño']);
         $('input[name=state]', '#state-form').val(['en_curso']);
+    }
+
+    function eventOverlap(date) {
+        let events = calendar.getEvents();
+        let overlapping = events.filter((element) => {
+            let diff = (date.getTime() - element.start.getTime()) / 1000;
+            return diff >= 0 && diff < 3600;
+        });
+
+        return overlapping.length > 0;
     }
 
     function sqlDate(date) {

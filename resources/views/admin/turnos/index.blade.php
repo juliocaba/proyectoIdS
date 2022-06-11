@@ -1,5 +1,4 @@
 @extends('layouts.app')
-{{-- <meta name="csrf-token" content="{{ csrf_token() }}"/> --}}
 @include('layouts.head')
 @section('content')
     <section class="content-header">
@@ -10,10 +9,10 @@
     <div class="content px-3">
 
         @include('flash::message')
-        @include('layouts.cuerpo')
+        @include('admin.turnos.cuerpo')
 
         
     </div>
-    @include('layouts.scripts')
+    @include('admin.turnos.scripts')
 @endsection
 

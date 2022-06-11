@@ -51,14 +51,24 @@
                     endTime: '16:00' // 4pm
                 }
             ],
-            dateClick: function (data) {
+            eventDataTransform: function(eventData) {
+                let colors = {
+                    "en_curso": "3788d8",
+                    "cancelado": "d0002a",
+                    "finalizado": "3cd849"
+                }
+
+                eventData.color = colors[eventData.state]
+                return eventData;
+            },
+            dateClick: function(data) {
                 eventModal(data.event, data, 'add');
             },
-            eventClick: function (data) {
+            eventClick: function(data) {
                 setFormData(data.event);
                 eventModal(data.event, data, 'edit');
             },
-            eventDrop: function (data) {
+            eventDrop: function(data) {
                 moveEvent(data.event);
             },
         });
@@ -82,7 +92,7 @@
             $('#turno-confirm').on('click', function() {
                 let form = getFormData();
 
-                if (!form.title || form.hours === NaN || form.minutes === NaN) {
+                if (!form.title || isNaN(form.hours) || isNaN(form.minutes)) {
                     errorMessage('Se necesita especificar el título y la hora.');
                     return;
                 }
@@ -133,7 +143,7 @@
                 let event = data.event;
                 let form = getFormData();
 
-                if (!form.title || form.hours === NaN || form.minutes === NaN) {
+                if (!form.title || isNaN(form.hours) || isNaN(form.minutes)) {
                     errorMessage('Se necesita especificar el título y la hora.');
                     return;
                 }

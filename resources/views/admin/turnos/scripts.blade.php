@@ -160,7 +160,7 @@
                 end.setHours(form.hours + 1);
                 end.setMinutes(form.minutes);
 
-                if (eventOverlap(start)) {
+                if (eventOverlap(start, event.id)) {
                     errorMessage('Ya existe un turno en este horario.');
                     return;
                 }
@@ -289,8 +289,15 @@
         $('input[name=state]', '#state-form').val(['en_curso']);
     }
 
-    function eventOverlap(date) {
+    function eventOverlap(date, id) {
         let events = calendar.getEvents();
+        
+        if (id) {
+            events = events.filter((element) => {
+                return element.id != id;
+            });
+        }
+
         let overlapping = events.filter((element) => {
             let diff = Math.abs((date.getTime() - element.start.getTime()) / 1000);
             return diff >= 0 && diff < 3600;

@@ -21,7 +21,6 @@
                             <input type="time" id="turno-start" class="form-control" name="appt" min="08:00" max="20:00" required>      		
                         </div>
                     </div>
-                  <!-- aca enpeza lo mio jajajaj   -->
                     
                     <label>Descripcion:</label>
                     <br>
@@ -78,9 +77,6 @@
                             <label class="custom-control-label" for="customRadioInline9">Cancelado</label>
                         </div>
                     </form>
-
-                    <!-- acatermina lo mio -->
-
 
                 </div>
                 <div class="modal-footer">
